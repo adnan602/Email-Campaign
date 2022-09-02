@@ -1,0 +1,323 @@
+/*-----------------Root Variables----------*/
+:root{
+ --color-primary: #7380ec;
+ --color-danger:#ff7782;
+ --color-success: #3a72ff;
+ --color-warning: #ffbb55;
+ --color-white: #fff;
+ --color-info-light: #dce1eb ;
+ --color-info-dark: #7d8da1;
+ --color-dark: #363949;
+ --color-light: rgba(132, 139, 200, 0.18);
+ --color-primary-variant: #111e88;
+ --color-dark-variant: #677483;
+ --color-background:#f6f6f9;
+
+ --card-border-radius: 2rem;
+ --border-radius-1: 0.4rem;
+ --border-radius-2: 0.8rem;
+ --border-radius-3: 1.2rem;
+
+ --card-padding: 1.8rem;
+ --padding-1: 1.2rem;
+ --box-shadow: 0 2rem 3rem var(--color-light)
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    appearance: none;
+    border: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    overflow: visible;
+}
+html{
+    font-size: 14px;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    font-family: poppons, sans-serif;
+    font-size: 0.88rem;
+    background: var(--color-background);
+    user-select: none;
+    overflow-x: visible;
+    color: var(--color-dark);
+  
+}
+h1{
+    font-weight: 800;
+    font-size:1.8rem;
+}
+h2{
+    font-size: 1.4rem;
+}
+h3{
+    font-size: 1.2rem;
+}
+h4{
+    font-size: 1rem;
+}
+h5{
+    font-size: 0.77rem;
+}
+p{
+    color: var(--color-dark-variant);
+}
+b{
+    color: var(--color-dark);
+}
+.primary{
+    color: var(--color-primary);
+}
+.danger{
+    color: var(--color-danger);
+}
+.success{
+    color: var(--color-success);
+}
+.warning{
+    color: var(--color-warning);
+
+}
+
+/* container */
+
+.container{
+    display: grid;
+    width: 96%;
+    margin: 0 auto;
+
+    grid-template-columns: 20rem auto;
+    background:var(--color-info-light);
+    border-radius: var(--border-radius-1);
+    
+  
+}
+a{
+    color: var(--color-dark);
+}
+aside{
+    height: 100%;
+    background: rgb(255, 254, 254);
+    border-right: 0.1px ridge #bfc0c1;
+}
+aside .top{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2.5rem;
+    gap: 0.8rem;
+    padding-bottom: 2rem;
+    border-bottom: 0.5px ridge #bfc0c1;
+    
+}
+aside .sidebar{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    position: relative;
+    top: 4rem;
+    margin-left: 2rem;
+   
+    
+}
+aside h4{
+    font-weight: 500;
+}
+aside .sidebar a{
+    display: flex;
+    color: var(--color-dark-variant);
+    position: relative;
+    gap: 1rem;
+    height: 3.7rem;
+    align-items: center;
+    
+    
+
+}
+aside .sidebar a span{
+    font-size: 1.6rem;
+    transition: all 300ms ease;
+}
+aside .sidebar  a.active{
+    background: var(--color-light);
+    color: var(--color-primary);
+    margin-left: -2rem;
+}
+aside .sidebar  a.active:before{
+    content: "";
+    width: 6px;
+    height: 100%;
+    background: var(--color-primary);
+}
+aside .sidebar  a.active span{
+    
+    margin-left: 1rem;
+}
+aside .sidebar a:hover{
+    color: var(--color-primary);
+}
+aside .sidebar  a:hover span{
+    margin-left: 1rem;
+}
+aside .top .box{
+    background: var(--color-info-light);
+    color: var(--color-primary-variant));
+    border-radius: var(--border-radius-1);
+    padding: 3px 3px;
+    
+}
+aside .sidebar a:last-child{
+    position: absolute;
+    bottom: 5rem;
+    width: 100%;
+}
+
+/* End of aside */
+main {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background: rgb(255, 254, 254);
+    
+}
+main .main-top{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 2.5rem;
+    right: 5rem;
+    align-items: center;
+    gap: 1.4rem;
+    background: rgb(255, 254, 254);
+    
+    
+}
+main .main-top .main-btn{
+    background: var(--color-primary-variant);
+    padding: 5px 16px;
+    border-radius: var(--border-radius-1);
+    color: var(--color-background);
+    font-size: 14px;
+    box-shadow: 0px 5px 15px var(--color-dark-variant)
+
+}
+main .main-line{
+    position: relative;
+    width: 100%;
+    height: 8.15rem;
+    border-bottom: 0.5px ridge #bfc0c1;
+    
+}
+
+
+
+main .innerinsight{
+    background: #e9e8e8;
+    color: #88898b ;
+    padding: 4rem 5rem ;
+    position: relative;
+    align-items:center ;
+    height: 100%;
+
+}
+
+main .insights{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    align-items: center;
+    
+}
+main .insights .inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.9rem;
+    font-size: 14px;
+    
+}
+main .innerinsight .insights .inner p:first-child{
+    border-bottom: 2px solid blue;
+    padding-bottom: 1rem;
+}
+main .innerinsight .top{
+    display: flex;
+    
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    
+}
+
+
+main .innerinsight .left{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    background: white;
+    padding: 2rem 2rem;
+    border-radius: var(--border-radius-1);
+    align-items: center;
+}
+main .innerinsight .left .top >div h3{
+    color: black;
+    height: 2rem;
+    font-weight: lighter;
+    font-size: 1.2rem;
+}
+main .innerinsight .left .right table{
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    text-align: center;
+    align-items: center;
+   
+}
+main .innerinsight .left .right table thead tr{
+    text-align: center;
+    align-items: center;
+    display: flex;
+    gap: 3rem;
+    height: 2.5rem;
+    padding-left: 2rem;
+
+}
+main .innerinsight .left .right table tbody tr {
+    text-align: center;
+    align-items: center;
+    font-size: medium;
+    font-weight: 1.5rem;
+    display: flex;
+    gap: 3rem;
+    color: black;
+}
+main .top .box{
+    background: var(--color-info-light);
+    color: var(--color-primary-variant));
+    border-radius: var(--border-radius-1);
+    padding: 3px 3px;
+    
+}
+main .innerinsight .flex-container {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+  right: 4.8rem;
+  bottom: 1rem;
+  border-radius: var(--border-radius-1);
+}
+.flex-container>div {
+  
+  
+  margin: 5px;
+  text-align: center;
+  
+  padding:10px 10px;
+  
+}
